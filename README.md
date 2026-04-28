@@ -24,7 +24,7 @@
 </div>
 
 <div>
-  <pre>
+  <pre><code>
 function createTimer(delay, callback)
     local start = CurTime()
     return function()
@@ -35,7 +35,7 @@ function createTimer(delay, callback)
         return false
     end
 end
-  </pre>
+  </code></pre>
   <p1><b>Памятка</b> Эта функция недостаточно раскрывает возможности <code>CurTime()</code>, вы можете взять эту функцию за основу и улучшить/обезопасить. Не советую использовать <code>timer.Create</code>, так как при лагах сервера могут возникнуть сбои, также сильно нагружают сам сервер при большом количестве. Также <code>CurTime()</code> отлично работает с хуком <code>Think</code>, который обрабатывает каждый тик сервера.</p1>
 </div>
 
