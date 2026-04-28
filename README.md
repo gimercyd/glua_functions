@@ -17,3 +17,24 @@
   </code></pre>
   <p1><b>Важное примечание!</b> Не советую использовать <code>team.GetInfo(ply:Team())</code>. Мой метод null safety.</p1>
 </div>
+
+<div align="center">
+  <h2>Прочее</h2>
+  <h3>Custom timer</h3>
+</div>
+
+<div>
+  <pre>
+function createTimer(delay, callback)
+    local start = CurTime()
+    return function()
+        if CurTime() >= start + delay then
+            callback()
+            return true
+        end
+        return false
+    end
+end
+  </pre>
+  <p1><b>Памятка</b> Эта функция недостаточно раскрывает возможности <code>CurTime()</code>, вы можете взять эту функцию за основу и улучшить/обезопасить. Не советую использовать <code>timer.Create</code>, так как при лагах сервера могут возникнуть сбои, также сильно нагружают сам сервер при большом количестве.</p1>
+</div>
